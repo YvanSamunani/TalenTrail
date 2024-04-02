@@ -1,0 +1,198 @@
+.registerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+.illustrationWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.illustration {
+  max-width: 100%;
+  height: auto;
+}
+
+.formWrapper {
+  flex: 1;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  /* The blue underline for the title */
+  border-bottom: 3px solid #4d5fe3;
+  padding-bottom: 5px;
+}
+
+.header {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.subHeader {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.roleButtons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.roleButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #e7e7e7;
+  color: #333;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.roleButton.active {
+  background-color: #4d5fe3;
+  color: white;
+}
+
+.registerForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputField {
+  padding: 15px;
+  padding-right: 40px; /* increased right padding to make room for icon */
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: calc(100% - 30px); /* accounting for padding */
+}
+
+.registerButton {
+  padding: 15px;
+  background-color: #4d5fe3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.registerButton:hover {
+  background-color: #377dff;
+}
+
+.loginPrompt {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.loginLink {
+  color: #4d5fe3;
+  text-decoration: none;
+}
+
+.passwordStrengthMeter {
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.passwordStrengthIndicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #ddd;
+  border-radius: 5px;
+  transition: width 0.3s ease-in-out;
+}
+
+.strength1 { width: 20%; background-color: red; }
+.strength2 { width: 40%; background-color: red; }
+.strength3 { width: 60%; background-color: orange; }
+.strength4 { width: 80%; background-color: yellowgreen; }
+.strength5 { width: 100%; background-color: green; }
+
+.feedbackMessage {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.passwordField {
+  position: relative;
+  display: flex;
+  align-items: center;
+  
+}
+
+.passwordField {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.passwordToggleIcon {
+  position: absolute;
+  right: 50px; /* distance from the right edge of the input */
+  top: 50%;
+  transform: translateY(-100%);
+  cursor: pointer;
+  color: #4d5fe3;
+  font-size: 1rem; /* Icon size can be adjusted here */
+}
+
+/* Add this to ensure the password field has the same height as other input fields */
+.passwordField .inputField {
+  padding-right: 40px; /* Adjust as necessary depending on icon size */
+}
+
+/* Ensure the feedback message does not overlap with the icon */
+.feedbackMessage {
+  padding-right: 50px; /* Adjust as necessary */
+  color:#4d5fe3;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .illustrationWrapper {
+    display: none; /* Hide illustration on small screens */
+  }
+
+  .formWrapper {
+    flex: 1 1 100%; /* Allow the form wrapper to take the full width */
+    margin: auto; /* Center the form in the remaining space if any */
+    width: 100%; /* Optional: set a max-width for the form */
+  }
+
+  .registerContainer {
+    flex-direction: column; /* Stack the elements vertically */
+    padding: 80px 30px;
+   
+  }
+
+  .registerButton {
+    padding: 15px;
+    background-color: #4d5fe3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 92.5%;
+  }
+}

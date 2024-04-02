@@ -1,0 +1,143 @@
+.navbar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fbf9f9; /* Change to your desired navbar color */
+    z-index: 10; /* Ensure it's above other content */
+    transition: box-shadow 0.3s ease-in-out;
+    margin-bottom: 10%;
+  }
+  
+  .logoLink {
+    order: -1; /* Ensures logo is always first in the flex container */
+    flex-grow: 1; /* Allows the logo to take up any extra space */
+    display: flex;
+    align-items: center;
+  }
+  
+  .navLogo {
+    height: auto;
+    width: auto; /* Adjusts to the intrinsic aspect ratio of the image */
+    max-height: 30px; /* Limits the size */
+  }
+  
+  .shadow {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navContainer {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px; /* Or your desired navbar height */
+    flex-wrap: wrap; /* Allows items to wrap */
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navItem {
+    margin-left: 20px; /* Space between items */
+  }
+  
+  .navLink {
+    text-decoration: none;
+    color: #4d5fe3; /* Your theme color */
+    padding: 8px 8px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .navLink:hover,
+  .navLink:focus {
+    text-decoration: underline;
+    color: grey; /* Color for hover state */
+     /* Your theme color */
+    border-radius: 5px;/* Optional: if you want rounded corners */
+    height: 20px;
+  }
+  
+  /* Add a class for the active state of the nav link if needed */
+  .navLink.active {
+    color: #ffffff;
+    background-color: #4d5fe3;
+  }
+
+  .navToggler {
+  display: none; /* Hide the button by default */
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 1.5rem;
+  color: #4d5fe3;
+}
+
+.navCollapse {
+  display: flex; /* Display the nav items by default */
+}
+
+.collapsed {
+  display: none; /* Hide the nav items when collapsed */
+}
+
+
+.show {
+  display: flex; /* Show the nav items when menu is toggled */
+}
+
+/* Media query for smaller devices */
+@media (max-width: 768px) {
+  .navToggler {
+    display: block;
+  }
+  .navCollapse {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%; /* Directly below the navbar */
+    left: 0;
+    background-color: #fbf9f9; /* Match the navbar background color */
+    box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+  }
+
+  /* Modifies the flex-direction of the navList and adjusts styles for navItems */
+  .navCollapse.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+  }
+  .show {
+    display: flex; /* Show the nav items when menu is toggled */
+  }
+  .navCollapse.collapsed {
+    display: flex; /* Show the nav items when not collapsed */
+  }
+  .navList {
+    width: 100%; /* Ensures the list covers the full width */
+    flex-direction: column;
+  }
+
+  .navItem {
+    width: 100%; /* Each nav item covers the full width */
+  }
+
+  .navLink {
+    text-align: center; /* Centers the text of nav links */
+    padding: 15px; /* Gives more space around the text */
+    width: 100%; /* Ensures each link covers the full width */
+    border-bottom: 1px solid #eaeaea; /* Optional: adds a separator between links */
+  }
+  .navLink:last-child {
+    border-bottom: none; /* Removes the border for the last item */
+  }
+}
+  

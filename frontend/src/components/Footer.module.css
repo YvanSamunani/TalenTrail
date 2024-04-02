@@ -1,0 +1,122 @@
+.footer {
+    background-color: #4d5fe3; /* Dark teal background for the first division */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+  }
+  
+  .footerColumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align horizontally to start */
+    padding: 0 15px;
+  }
+  
+  .quickLinks {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+  }
+  
+  .quickLinks h4 {
+    margin-bottom: 15px; /* Adds some space below the header */
+  }
+  
+  .quickLinks ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Removes default margin */
+  }
+  
+  .quickLinks li {
+    margin-bottom: 10px; /* Adds some space between the links */
+  }
+  
+  .quickLinks li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .quickLinks li a:hover {
+    text-decoration: underline;
+  }
+  
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  .contactItem {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .contactItem svg {
+    color: #ffd700; /* Adjust the color to match your design */
+    margin-right: 10px;
+  }
+
+  .icon {
+    color: #ffd700; /* Gold color for the icons */
+    margin-right: 15px; /* Adjusted space between icon and text */
+    width: 30px; /* Set a specific width for icons */
+    text-align: center; /* Center the icon in the allocated width space */
+  }
+
+  .contactItem div {
+    padding-left: 15px; /* Space between icon and text */
+  }
+
+  .contactItem h5 {
+    margin: 0;
+    color: white; /* If your footer has a dark background */
+    font-size: 1rem; /* Adjust size as needed */
+    margin-bottom: 5px; /* Space between header and paragraph */
+  }
+
+  .contactItem p {
+    margin: 0;
+    color: white; /* If your footer has a dark background */
+    font-size: 0.9rem; /* Adjust size as needed */
+  }
+
+  .socialIcons {
+    display: flex;
+    justify-content: center; /* Space icons evenly */
+    margin-top: 15px;
+  }
+  
+  .socialIcons i {
+    font-size: 1.5rem; /* Adjust the size of the icons */
+    margin: 0 10px; /* Adds space between icons */
+  }
+  
+  
+  /* ... existing styles ... */
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+    }
+  
+    .footerColumn {
+      margin-bottom: 20px;
+    }
+  }
+  .socialIcons svg {
+    margin-right: 10px; /* Adds some space between icons */
+  }
+  
+  .footerDivision {
+    background-color: hsl(233, 77%, 54%); /* Slightly darker teal for the second division */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+  }
+  

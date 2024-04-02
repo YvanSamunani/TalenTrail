@@ -1,0 +1,35 @@
+.coursesList {
+    margin: 20px;
+    overflow-x: auto;
+  }
+  
+  .coursesList h2 {
+    padding-left: 20px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .published {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .notPublished {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .completed {
+    background-color: #ffeb3b;
+    color: black;
+  }
+  

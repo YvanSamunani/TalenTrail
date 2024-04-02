@@ -1,0 +1,48 @@
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Adjust as needed */
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote {
+  font-style: italic;
+  color: #666; /* adjust the color as needed */
+  margin-bottom: 2rem;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.authorImage {
+  width: 80px; /* Adjust as needed */
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.authorName {
+  font-weight: bold;
+  color: #333; /* adjust the color as needed */
+}
+
+.authorTitle {
+  color: #777; /* adjust the color as needed */
+  font-size: 0.85rem;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+  .card {
+    width: 80%; /* Adjust as needed */
+    margin-bottom: 2rem;
+  }
+}

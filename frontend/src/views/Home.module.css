@@ -1,0 +1,232 @@
+.featureSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px; /* Space before the footer */
+}
+
+.featureText {
+  flex-basis: 50%;
+  margin-right: 20px; /* Adjust the space between text and image */
+}
+.header {
+  color: #4d5fe3; /* Replace 'teal' with your desired teal shade, e.g., #008080 */
+}
+.featureImage {
+  flex-basis: 50%;
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.featureText,
+.featureImage {
+  flex-basis: 50%;
+}
+
+/*.featureImage {
+  width: 50%;
+  height: auto;
+  border-radius: 10px; /* Optional for styling */
+
+
+  .exploreMoreBtn {
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px; /* Adjust space between the text and the button */
+    display: inline-block; /* To apply padding correctly */
+  }
+  
+  .exploreMoreBtn:hover {
+    background-color: white;
+    color: black;
+    text-decoration: none; /* Optional: Removes underline on hover */
+  }
+
+
+
+  .cardButton {
+    border: 2px solid #4d5fe3;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #4d5fe3;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px; /* Adjust space between the text and the button */
+    display: inline-block; /* To apply padding and margin correctly */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .cardButton:hover {
+    background-color: #4d5fe3;
+    color: white;
+    text-decoration: none; /* Optional: Removes underline on hover */
+  }
+  .cardTitle {
+    color: #4d5fe3;
+  }
+
+  .cardImg {
+    height: 200px; /* Example height, adjust as needed */
+    object-fit: cover; /* Preserve aspect ratio */
+    /*border-radius: 10px; /* Optional: Adds rounded corners to the image */
+    border-top-left-radius: calc(0.25rem - 1px); /* Match Bootstrap's default border-radius for cards */
+    border-top-right-radius: calc(0.25rem - 1px);
+  }
+
+  .cardRow {
+    margin-bottom: 20px; /* Adds 50px of space below the card row */
+  }
+
+  .featureIcons {
+    display: flex;
+    justify-content: space-around;
+    /*align-items: center;*/
+    margin: 1rem 0; /* Adjust margin as needed */
+  }
+  
+  .featureCard {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between icon and text as needed */
+    background: #ffffff; /* Background color */
+    padding: 1rem;
+    width: 30%;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  }
+  
+  .featureIcon {
+    /* Adjust width and height as needed */
+    width: 40px; /* Example width */
+    height: 40px; /* Example height */
+  }
+  
+  .featureText {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .featureText h3 {
+    margin: 0; /* Removes default margin */
+    color: #4d5fe3; /* Theme color for the text */
+    font-size: 1.25rem; /* Adjust font size as needed */
+  }
+  
+  .featureText p {
+    margin: 0; /* Removes default margin */
+    color: #6c757d; /* Subtext color */
+  }
+
+  .infoSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #eff0f4; /* Your app's background color */
+    padding: 2rem;
+  }
+  
+  .infoText {
+    flex-basis: 50%;
+    /* Add other styles for text section if necessary */
+  }
+  
+  .infoList {
+    list-style: none;
+    padding: 0;
+    /* Add other styles for list if necessary */
+  }
+  
+  .infoList li {
+    margin-bottom: 0.5rem;
+    /* Add other styles for list items if necessary */
+  }
+  
+  .viewCoursesButton {
+    background-color: #4d5fe3; /* Your theme color */
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    /* Add other styles for button if necessary */
+  }
+  
+  .infoImage {
+    flex-basis: 50%;
+    /* Add other styles for image section if necessary */
+  }
+  
+  .infoImage img {
+    max-width: 100%;
+    height: auto;
+    /* Add other styles for image if necessary */
+  }
+  
+  .ourServicesHeading {
+    color: #4d5fe3;
+    text-align: center;
+    font-size: 24px; /* Example size, adjust as needed */
+    margin-top: 30px; /* Spacing above the heading */
+    margin-bottom: 20px; /* Spacing below the heading */
+  }
+  
+
+  @media (max-width: 768px) {
+    .featureSection, .infoSection {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    /* Ensure images in these sections do not exceed the width of the container */
+    .featureImage, .infoImage img {
+      max-width: 90%;
+      height: auto;
+    }
+  
+    /* Adjust the layout of feature cards for smaller screens */
+    .featureIcons, .featureCard {
+      width: 100%;
+      justify-content: center;
+    }
+  
+    /* Adjust the layout of the feature text for smaller screens */
+    .featureText, .infoText {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+  
+    /* Stack the feature cards vertically */
+    .featureCard {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px; /* Add some space between stacked cards */
+    }
+  
+    /* Adjust the button size to fit smaller screens */
+    .viewCoursesButton, .cardButton {
+      width: 90%;
+      margin: 20px auto; /* Centers the button and adds margin */
+    }
+  
+    /* Stacks the cards vertically and adds space between them */
+    .cardRow {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    /* Ensure the card images maintain their aspect ratio but fill their containers */
+    .cardImg {
+      width: 100%; /* Full width of the card */
+      height: auto; /* Maintain aspect ratio */
+    }
+  }
+  

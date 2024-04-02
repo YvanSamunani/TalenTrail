@@ -1,0 +1,107 @@
+.sidebar {
+  position: fixed;
+  top: 60px; /* It starts from the top */
+  left: 0; /* It sticks to the left side */
+  bottom: 0; /* It should stretch to the bottom of the viewport */
+  width: 200px; /* Adjust as necessary */
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fff; /* Or any color you want */
+  z-index: 100; 
+}
+
+.userSection {
+  display: flex;
+  align-items: center; /* Centers the icon and name vertically */
+  padding-left: 5px; /* Adjust as needed */
+}
+
+.userIcon {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+  margin-right: 10px; /* Space between icon and name */
+}
+
+.userName {
+  font-size: 16px; /* Adjust as needed */
+  color: #fff; /* Adjust color as needed */
+  /* Add more styling for the user name text here */
+}
+
+  
+  .profileSection {
+    padding: 10px;
+    position: relative; /* This is needed to position the pseudo-element */
+    display: inline-block;
+  }
+  .profileSection::after {
+    content: '';
+    display: block;
+    width: 120%; /* Adjust the width of the border here */
+    margin-left: 15px; 
+    margin-right: 10px; /* These two margin properties will center the border */
+    border-bottom: 3px solid #4d5fe3;
+    position: absolute;
+    bottom: -10px; /* Adjust the position of the border from the bottom */
+    left: 0;
+    right: 0;
+  }
+  .userName {
+    padding: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #848590;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .navMenu {
+    padding-top: 10px;
+  }
+  
+  .navItem {
+    display: flex;
+    align-items: center;
+    color: #848590;
+    text-decoration: none;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  .navItem:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .icon {
+    margin-right: 10px; /* space between icon and text */
+    width: 20px; /* adjust as needed */
+    height: 20px; /* adjust as needed */
+  }
+
+  .hamburger {
+    display: none; /* Hide by default */
+    position: fixed; /* Position it on the top left corner */
+    top: 15px;
+    left: 15px;
+    z-index: 200; /* Above the sidebar */
+    font-size: 24px; /* Adjust as necessary */
+    cursor: pointer;
+  }
+
+  /* For mobile screens */
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      left: -200px; /* Hidden by default on mobile */
+    }
+  
+    .sidebar.open {
+      left: 0; /* Shown when the hamburger menu is clicked */
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show on smaller screens */
+    top: 60px;
+    color: #4d5fe3;     
+  }
+}

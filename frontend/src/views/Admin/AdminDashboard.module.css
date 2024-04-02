@@ -1,0 +1,11 @@
+.adminDashboard {
+    display: flex;
+    flex-direction: column;
+    /* ... additional styling ... */
+  }
+  
+  .mainContent {
+    flex-grow: 1;
+    /* ... additional styling ... */
+  }
+  

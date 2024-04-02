@@ -1,0 +1,249 @@
+.aboutHeader {
+    background-image: url('../images/bg-404.jpg'); /* Update with the actual path */
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+  
+.headerContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.headerImage {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
+
+.breadcrumb {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    margin-top: 1rem;
+}
+  .breadcrumb a {
+    color: #4d5fe3;
+    text-decoration: none;
+  }
+  
+  .breadcrumb span {
+    color: #6c757d;
+  }
+  
+  
+  .imageSection {
+    display: flex;
+    justify-content: center;
+    gap: 2rem; /* Space between the images */
+    padding: 2rem 0;
+  }
+  
+  .imageContainer {
+    width: 45%;
+    overflow: hidden; /* For rounded corners */
+    border-radius: 15px;
+  }
+  
+  .roundedImage {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+  }
+  
+  .rounded-image:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+  }
+  
+  .paragraphSection {
+    background-color: #f8f9fa; /* Light background for the paragraph section */
+    padding: 2rem 10%;
+    text-align: center;
+  }
+  
+  .paragraphContainer h2 {
+    font-size: 2.5rem;
+    color: #4d5fe3;
+    margin-bottom: 1rem;
+  }
+  
+  .paragraphContainer h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  .paragraphContainer p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .discoverMoreBtn {
+    background-color: #4d5fe3;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .discoverMoreBtn:hover {
+    background-color: #4d5fe3; 
+  }
+  
+  .testimonialsSection {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+    display: flex; /* Use flexbox to align items horizontally */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap as needed */
+  }
+  
+  .testimonialsHeader {
+    flex-basis: 100%; /* Ensure the header takes the full width */
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonialsHeader h2 {
+    font-size: 3rem;
+    color: #4d5fe3; 
+    margin-bottom: 1rem;
+  }
+  
+  .testimonialsHeader h3 {
+    font-size: 2rem; /* Adjust the font size as needed */
+    color: #777; /* Adjust the color as needed */
+    margin-bottom: 2rem;
+  }
+  
+  .testimonialsHeader p {
+    margin-bottom: 3rem;
+    color: #555;
+    font-size: 1.2rem;
+  }
+  
+  .testimonialsContainer {
+    display: flex;
+    flex-basis: 100%; /* Ensure the container takes the full width */
+    justify-content: space-evenly; /* Distribute space evenly around items */
+    gap: 1rem; /* Space between the cards */
+  }
+  
+  @media (max-width: 768px) {
+    .testimonialsContainer {
+      flex-direction: column; /* Stack the cards vertically on smaller screens */
+      align-items: center; /* Center the cards when stacked */
+    }
+  
+    .testimonialsHeader h2,
+    .testimonialsHeader h3 {
+      font-size: 1.5rem;
+    }
+    
+    .testimonialsHeader p {
+      font-size: 1rem;
+    }
+  }
+
+  .factsSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: url('../images/bg-404.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 2rem 0;
+    margin-bottom: 5%;
+  }
+  
+  .missionStatement {
+    max-width: 40%;
+  }
+  .missionStatement h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .missionStatement p {
+    font-size: 1rem;
+  }
+  
+  .factsContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 50%; /* Adjust based on your layout */
+  }
+
+  .factCard {
+    background-color: #333; /* Dark background for the card */
+    color: white; /* White text color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 1rem;
+    width: 100%; /* Fixed width */
+    text-align: center; /* Center the text */
+    margin: 0 1rem; /* Margin on the sides */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    opacity: 80%;
+  }
+  
+  .factCard:hover {
+    background-color: #444; /* Slightly lighter on hover */
+  }
+  
+  .icon {
+    font-size: 4rem; /* Large icon size */
+    margin-bottom: 0.5rem; /* Space below the icon */
+  }
+  
+  .number {
+    font-size: 2rem; /* Large number size */
+    font-weight: bold; /* Make the number bold */
+    margin-bottom: 0.25rem; /* Space below the number */
+  }
+  
+  .description {
+    font-size: 1rem; /* Standard text size */
+  }
+
+  @media (max-width: 768px) {
+    .factsSection {
+      flex-direction: column; /* Stack missionStatement and factsContainer vertically */
+      align-items: center; /* Center the items */
+    }
+  
+    .missionStatement,
+    .factsContainer {
+      max-width: 100%; /* Allow both to take the full width */
+      width: 80%; /* You can adjust this percentage to suit your design preference */
+      margin-bottom: 1rem; /* Add some margin to the bottom */
+    }
+  
+    .factsContainer {
+      flex-direction: row; /* Keep facts in a row if they fit */
+      flex-wrap: wrap; /* Wrap facts to new line if they don't fit */
+      justify-content: center; /* Center the facts cards */
+      gap: 20px; /* Add some space between the cards */
+    }
+  
+    .factCard {
+      width: calc(80% - 20px); /* Take half the width minus the gap */
+      margin: 10px;
+      opacity: 80%;
+    }
+    .factCard{
+      color: white;
+    }
+  }

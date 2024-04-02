@@ -1,0 +1,27 @@
+.card {
+    background: #333; /* Adjust the color as needed */
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 0.5rem;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .card:hover {
+    background: #444; /* Adjust hover color as needed */
+  }
+  
+ 
+  
+  .number {
+    font-size: 2rem; /* Adjust the size as needed */
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  /* ... additional styles as needed ... */
+  
