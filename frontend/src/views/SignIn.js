@@ -5,6 +5,7 @@ import { useAuth } from '../auth/AuthContext'; // Import useAuth hook
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import styles from './SignIn.module.css';
+import { production_url } from '../constants';
 
 const SignIn = () => {
   const [credentials, setCredentials] = useState({
@@ -32,7 +33,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/login', credentials);
+      const response = await axios.post(production_url+'/login', credentials);
 
       // Check for a successful login response
       if (response.data.message === 'Login successful') {

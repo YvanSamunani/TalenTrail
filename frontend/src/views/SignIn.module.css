@@ -65,8 +65,6 @@
     align-items: center;
   }
   
-
-  
   .eyeIcon {
     position: absolute;
     right: 10px; /* Adjusted to align with padding of inputField */

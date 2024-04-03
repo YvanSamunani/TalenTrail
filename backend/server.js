@@ -7,7 +7,7 @@ const app = express();
 
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // or your frontend's origin
+  origin: ['https://talentrail.me/', 'http://localhost:3000'],  
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
@@ -73,7 +73,7 @@ app.post('/register', async (req, res) => {
     if (typeof username !== 'string' || typeof password !== 'string') {
       return res.status(400).send('Username and password must be strings.');
     }
-    
+
 // Fetching user endpoint
   app.get('/users', (req, res) => {
     // Add authentication and authorization checks as necessary

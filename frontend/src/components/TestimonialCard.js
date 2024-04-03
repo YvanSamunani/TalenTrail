@@ -13,6 +13,7 @@ const TestimonialCard = ({ quote, name, title, image }) => {
         </div>
       </div>
     </div>
+    
   );
 };
 

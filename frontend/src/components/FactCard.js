@@ -1,5 +1,5 @@
 import React from 'react';
-import cardStyles from '../views/AboutPage.module.css'; // Adjust the path as necessary
+import cardStyles from '../views/AboutPage.module.css';
 
 const FactCard = ({ number, description, icon }) => {
   return (
