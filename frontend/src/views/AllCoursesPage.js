@@ -26,7 +26,7 @@ const AllCoursesPage = () => {
     };
 
     useEffect(() => {
-        fetch('http://localhost:5000/courses')
+        fetch('http://localhost:3001/courses')
             .then(response => response.json())
             .then(data => {
                 setCourses(data);
@@ -90,7 +90,7 @@ const AllCoursesPage = () => {
 
     const handleEnrollment = (courseId) => {
         const userId = localStorage.getItem('userId');
-        fetch('http://localhost:5000/enroll', {
+        fetch('http://localhost:3001/enroll', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

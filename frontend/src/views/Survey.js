@@ -26,7 +26,7 @@ function Survey() {
     // Fetch all necessary data for the survey
     const fetchData = async (endpoint) => {
       try {
-        const response = await fetch(`http://localhost:5000/${endpoint}`);
+        const response = await fetch(`http://localhost:3001/${endpoint}`);
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -88,7 +88,7 @@ function Survey() {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/submit-survey', {
+      const response = await fetch('http://localhost:3001/submit-survey', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(surveyData),

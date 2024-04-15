@@ -15,7 +15,7 @@ const ChatBox = () => {
   const fetchMessages = async () => {
     if (currentChat && currentUserId) { // Ensure that both currentChat and currentUserId are available
       try {
-        const response = await axios.get(`http://localhost:5000/messages/${currentUserId}/${currentChat.receiver_id}`);
+        const response = await axios.get(`http://localhost:3001/messages/${currentUserId}/${currentChat.receiver_id}`);
 
         setMessages(response.data);
       } catch (error) {
@@ -57,7 +57,7 @@ const ChatBox = () => {
     });
 
     try {
-      await axios.post('http://localhost:5000/message', {
+      await axios.post('http://localhost:3001/message', {
         sender_id: currentUserId, // Ensure this is not undefined
         receiver_id: currentChat.receiver_id, // Ensure this is not undefined
         message: newMessage // Ensure this is not an empty string

@@ -10,7 +10,7 @@ const ChatList = () => {
     const fetchChats = async () => {
       if (currentUserId) {  // Ensure there's a user ID to fetch chats for
         try {
-          const response = await axios.get(`http://localhost:5000/chats?userId=${currentUserId}`);
+          const response = await axios.get(`http://localhost:3001/chats?userId=${currentUserId}`);
           setChats(response.data);
         } catch (error) {
           console.error('Error fetching chats:', error);
@@ -24,7 +24,7 @@ const ChatList = () => {
   // Define fetchMessages within ChatList
   const fetchMessages = async (chat) => {
     try {
-      const response = await axios.get(`http://localhost:5000/messages/${currentUserId}/${chat.receiver_id}`);
+      const response = await axios.get(`http://localhost:3001/messages/${currentUserId}/${chat.receiver_id}`);
       setMessages(response.data);
     } catch (error) {
       console.error('Error fetching messages for chat:', error);

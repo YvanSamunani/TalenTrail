@@ -11,7 +11,7 @@ const Dashboard = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
-      fetch('http://localhost:5000/enrollments/count', {
+      fetch('http://localhost:3001/enrollments/count', {
           method: 'GET',
           headers: {
               'Content-Type': 'application/json',

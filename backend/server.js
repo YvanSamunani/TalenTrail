@@ -10,8 +10,8 @@ console.log('JWT Secret:', process.env.ACCESS_TOKEN_SECRET); // Debugging output
 const app = express();
 
 
-const allowedOrigins = 'http://localhost:3000';
-//const allowedOrigins = ['http://localhost:3000', 'https://talentrail.me'];
+//const allowedOrigins = 'http://localhost:3000';
+const allowedOrigins = ['http://localhost:3000', 'https://talentrail.me'];
 const corsOptions = {
   origin: (origin, callback) => {
     // Allow requests with no origin, like mobile apps or curl
@@ -350,7 +350,7 @@ app.post('/message', (req, res) => {
 
 
   
-  const PORT = process.env.PORT || 5000;
+  const PORT = process.env.PORT || 3001;
   app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 
