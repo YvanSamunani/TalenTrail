@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 function Layout({ children }) {
   const location = useLocation();
-  const noFooterRoutes = ['/dashboard']; // Add more paths here if needed
+  const noFooterRoutes = ['/dashboard','/chatpage']; // Add more paths here if needed
   const showFooter = !noFooterRoutes.includes(location.pathname);
 
   return (

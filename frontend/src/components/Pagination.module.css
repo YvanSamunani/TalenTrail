@@ -1,0 +1,56 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 1rem;
+    width: 100%; /* Full width to center the pagination within its parent */
+  }
+
+  .pagination ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px; /* Spacing between pagination items */
+    padding-left: 0; /* Removes padding */
+    list-style: none; /* Removes default list styling */
+
+  }
+  
+  .pagination li {
+    margin: 0; 
+  }
+  
+  .pagination button {
+    border: 1px solid #ddd; /* Subtle border color */
+    background: white;
+    color: #333;
+    border-radius: 50%; /* Circular buttons */
+    cursor: pointer;
+    font-size: 1rem; /* Adjust font size as needed */
+    width: 35px; /* Width of the buttons */
+    height: 35px; /* Height of the buttons, should be equal to width for a circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Hover effect for buttons */
+.pagination button:hover:not(.disabled) {
+    background: #f0f0f0; /* Slightly darker background on hover */
+  }
+/* Active page number style */
+.pagination .paginationButton.active {
+    background-color: #4d5fe3; /* Active button background color */
+    color: white; /* Text color for active button */
+    border-color: #4d5fe3;  /* Border color for active button */
+  }
+
+  /* Disabled button style */
+.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+/* Hide arrows on disabled state and on first and last pages */
+.pagination button.disabled {
+    visibility: hidden;
+  }

@@ -43,6 +43,10 @@ function Navbar() {
               <Link className={styles.navLink} to="/">Home</Link>
             </li>
 
+            {/* <li className="nav-item">
+              <Link className={styles.navLink} to="/survey">Survey</Link>
+            </li> */}
+
             <li className="nav-item">
               <Link className={styles.navLink} to="/about">About</Link>
             </li>

@@ -1,0 +1,71 @@
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    overflow: hidden; /* So that the image does not break the border-radius */
+  }
+  
+  .cardImage img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the entire area of the container */
+  }
+  
+  .cardContent {
+    padding: 1rem;
+  }
+  
+  .cardContent h3 {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .instructor {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .rating {
+    font-size: 1.2rem;
+    color: #ffc107; /* Gold color for stars */
+  }
+  
+  .fullStar {
+    color: #ffc107; /* Gold color for filled stars */
+  }
+  
+  .emptyStar {
+    color: #ddd; /* Light grey for empty stars */
+  }
+  
+  
+  .price {
+    color: #4d5fe3;
+    font-weight: bold;
+  }
+  
+  .level {
+    font-size: 0.8rem;
+    background: #eef; /* Use a light background */
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 15px;
+  }
+  
+  .enrollButton {
+    background-color: #4d5fe3;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 100%; /* Make the button stretch to full width of the card */
+  }
+  
+  .enrollButton:hover {
+    background-color: #3954a3; /* Darker shade on hover */
+  }
+  

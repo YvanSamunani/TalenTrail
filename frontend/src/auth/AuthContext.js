@@ -5,29 +5,24 @@ const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => localStorage.getItem('isAuthenticated') === 'true');
 
-    const checkAuthStatus = () => {
-        const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true';
-        setIsAuthenticated(isAuthenticated);
-      };
-    const login = () => {
-        setIsAuthenticated(true);
-      };
-      
-    const logout = () => {
-        localStorage.removeItem('isAuthenticated');
-        localStorage.removeItem('userName');
-        setIsAuthenticated(false);
-      };
-    useEffect(() => {
-        const authFlag = localStorage.getItem('isAuthenticated');
-        setIsAuthenticated(authFlag === 'true');
-      }, []);
+  const login = () => {
+      localStorage.setItem('isAuthenticated', 'true');
+      setIsAuthenticated(true);
+  };
 
-      return (
-        <AuthContext.Provider value={{ isAuthenticated, setIsAuthenticated, login, logout }}>
+  const logout = () => {
+      localStorage.removeItem('isAuthenticated');
+      localStorage.removeItem('userName');
+      localStorage.removeItem('token'); // Make sure to clear token as well
+      setIsAuthenticated(false);
+  };
+
+  return (
+      <AuthContext.Provider value={{ isAuthenticated, login, logout }}>
           {children}
-        </AuthContext.Provider>
-      );
+      </AuthContext.Provider>
+  );
 };
+

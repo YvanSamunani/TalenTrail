@@ -1,0 +1,78 @@
+  .chatListContainer {
+    background-color: white;
+    border-radius: 10px; /* Adjust to match the border radius in the image */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow around the container */
+    overflow: hidden; /* Ensures inner content doesn't spill out of border-radius */
+    font-family: 'Arial', sans-serif; /* Replace with the font of your choice */
+    max-width: 350px; /* Match the width in the image */
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-left: 20px;
+  }
+  
+  .chatListHeader {
+    background-color: #4d5fe3; /* Adjusted to the color in the image */
+    color: white;
+    padding: 20px 15px; /* Padding for header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem; /* Large font size for header */
+    font-weight: bold;
+  }
+
+  .newMessageIndicator {
+    background-color: #ff4141; /* Red background for new message indicator */
+    border-radius: 15px;
+    padding: 5px 10px; /* Padding inside the new message bubble */
+    font-size: 0.8rem; /* Smaller font size for indicator */
+    font-weight: bold;
+    display: inline-block;
+  }
+  
+  .chatListItem {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Vertical and horizontal padding for list items */
+    border-bottom: 1px solid #f1f1f1; /* Light border between chat items */
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .chatListItem:last-child {
+    border-bottom: none; /* No border for the last item to maintain container border-radius */
+  }
+  
+  .chatListItem:hover {
+    background-color: #f8f9fa; /* Light background color on hover */
+  }
+  
+  .userAvatar {
+    width: 40px; /* Small, circular avatar size */
+    height: 40px;
+    border-radius: 50%; /* Circle shape */
+    margin-right: 15px; /* Space between avatar and chat preview */
+    overflow: hidden; /* Ensures the image doesn't spill out of border-radius */
+    background-color: #6c757d; /* Fallback color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1rem; /* Size of the initial */
+    font-weight: bold;
+  }
+  
+  .chatPreview {
+    flex-grow: 1; /* Allows chat preview to fill remaining space */
+  }
+  
+  .userName {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px; /* Space between name and last message preview */
+  }
+  
+  .lastMessagePreview {
+    color: #6c757d; /* Lighter color for the message preview */
+    font-size: 0.9rem; /* Smaller font size for the message */
+  }

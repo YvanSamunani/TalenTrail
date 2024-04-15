@@ -1,0 +1,70 @@
+  .chatPage {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .chatMain {
+    margin-left: 200px; /* Same as your sidebar */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-height: 0; /* New addition to enable scrolling within flex container */
+  }
+  .chatHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .chatTitle {
+    margin: 0;
+    font-size: 24px; 
+    color: #4d5fe3;
+  }
+  
+  .newChatButton {
+    padding: 10px 20px;
+    background-color: #4d5fe3; /* Bootstrap primary blue, adjust as needed */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Adjust as needed */
+    /* Add any hover effects you like */
+  }
+  
+  .newChatButton:hover {
+    background-color: #0056b3; /* Darker shade for hover effect */
+  }
+  
+  .chatColumns {
+    display: flex;
+    flex-grow: 1;
+    overflow-y: auto; /* Allows scrolling within the chat columns */
+  }
+  
+  .inboxSection {
+    width: 25%; /* Adjust based on your layout */
+    border-right: 1px solid #333; /* Separator as per the image */
+    /* Additional styles */
+  }
+
+  .chatListContainer {
+    width: 30%; /* Increase the width as needed */
+    /* Other styles remain unchanged */
+  }
+  
+  .chatInterface {
+    width: 100%; /* Adjust based on your layout */
+    /* Additional styles */
+  }
+
+
+  
+  /* You will add more styles here for inbox list items, chat messages, chat input, etc. */
+  /* Use media queries to handle responsiveness as shown in your Dashboard.module.css */
+  

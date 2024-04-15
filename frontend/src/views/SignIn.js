@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import styles from './SignIn.module.css';
 import { production_url } from '../constants';
+import { development_url } from '../constants';
 
 const SignIn = () => {
   const [credentials, setCredentials] = useState({
@@ -33,34 +34,27 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(production_url+'/login', credentials);
-
-      // Check for a successful login response
-      if (response.data.message === 'Login successful') {
-        localStorage.setItem('isAuthenticated', 'true'); // Optionally set authentication status in local storage
-        localStorage.setItem('userName', response.data.userName); // Assuming this is the data format
-        login(); // Update context to reflect authentication
-        navigate('/dashboard'); // Navigate to the dashboard
+      const response = await axios.post(development_url + '/login', credentials);
+  
+      if (response.data.accessToken) {
+        localStorage.setItem('token', response.data.accessToken);
+        localStorage.setItem('userName', response.data.userName);
+        localStorage.setItem('userId', response.data.userId);
+        login();
+        navigate('/dashboard');
       } else {
-        // If the login is not successful but no error was thrown, set a generic error message
-      setLoginError('Invalid username or password.'); // Assuming generic error for security
+        setLoginError(response.data.message || 'Invalid username or password.');
       }
     } catch (error) {
-      // If an error response was received from the server, check the status code
-      if (error.response) {
-        // If the status code is 401, use the server's error message
-        if (error.response.status === 401) {
-          setLoginError(error.response.data);
-        } else {
-          // For all other errors, use a generic error message
-          setLoginError('Login failed due to server error.');
-        }
+      if (error.response && error.response.data.message) {
+        setLoginError(error.response.data.message);
       } else {
-        // If no response was received, it's likely a network error
-        setLoginError('Cannot connect to the server. Please try again later.');
+        setLoginError('Login failed due to server error.');
       }
     }
   };
+  
+
 
   return (
     <div className={styles.signInContainer}>

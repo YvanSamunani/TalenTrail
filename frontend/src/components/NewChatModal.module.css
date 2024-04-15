@@ -1,0 +1,88 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .modalContent {
+    background-color: white;
+    width: 90%;
+    max-width: 400px; /* Maximum width of the modal */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .modalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Space below the header */
+  }
+  
+  .modalTitle {
+    font-size: 1.25rem;
+    color: #4d5fe3; /* Primary color for the modal title */
+    margin: 0;
+  }
+  
+  .userList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px; /* Fixed max height with scroll */
+    overflow-y: auto;
+  }
+  
+  .userListItem {
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px; /* Space between list items */
+  }
+  
+  .userListItem:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+  }
+  
+  .userAvatar {
+    width: 40px; /* Fixed width for consistency */
+    height: 40px; /* Fixed height to match width */
+    border-radius: 50%; /* Circular avatar */
+    background-color: #cccccc; /* Placeholder color if no image is provided */
+    overflow: hidden; /* Hide overflow for images */
+    margin-right: 12px; /* Space between avatar and username */
+  }
+  
+  .userName {
+    font-size: 1rem;
+    color: #333; /* Dark color for text for readability */
+    font-weight: 500; /* Slightly bolder font for the username */
+  }
+  
+  .closeModalButton {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #4d5fe3;
+    cursor: pointer;
+  }
+  
+  /* Additional responsive design styles if needed */
+  @media (max-width: 600px) {
+    .modalContent {
+      width: 95%;
+    }
+  }
+  

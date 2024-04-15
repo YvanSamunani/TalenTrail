@@ -2,21 +2,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 50px; /* Space before the footer */
+  margin-bottom: 50px;
+  margin-top: 20px;
 }
 
 .featureText {
   flex-basis: 50%;
-  margin-right: 20px; /* Adjust the space between text and image */
+  margin-right: 20px;
+  font-family: 'Amagro', sans-serif;
 }
 .header {
   color: #4d5fe3; /* Replace 'teal' with your desired teal shade, e.g., #008080 */
 }
 .featureImage {
   flex-basis: 50%;
-  max-width: 50%;
+  max-width: 30%;
   height: auto;
   border-radius: 10px;
+  margin-right: 30px;
 }
 
 .featureText,
@@ -71,6 +74,12 @@
   }
   .cardTitle {
     color: #4d5fe3;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .cardText{
+    color: #6c757d;
+    font-family: 'Amagro', sans-serif;
   }
 
   .cardImg {
@@ -123,6 +132,7 @@
   .featureText p {
     margin: 0; /* Removes default margin */
     color: #6c757d; /* Subtext color */
+    
   }
 
   .infoSection {
@@ -132,41 +142,84 @@
     background-color: #eff0f4; /* Your app's background color */
     padding: 2rem;
   }
+
+  .infoText h2{
+    font-family: 'Amagro', sans-serif;
+    color: #4d5fe3;
+  }
   
   .infoText {
     flex-basis: 50%;
-    /* Add other styles for text section if necessary */
+    font-family: 'Amagro', sans-serif;
+    color: #6c757d;
   }
+
   
   .infoList {
     list-style: none;
-    padding: 0;
-    /* Add other styles for list if necessary */
+    padding-left: 0; 
   }
   
   .infoList li {
-    margin-bottom: 0.5rem;
-    /* Add other styles for list items if necessary */
+    position: relative;
+    padding-left: 30px; /* Adjust this value to create space for the icon */
+    margin-bottom: 1rem;
+  }
+
+  .infoList i{
+    color: #4d5fe3;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+    /* You can also use padding-right if you prefer to adjust space within the li element */
+    width: 20px;
+    text-align: center; 
   }
   
   .viewCoursesButton {
-    background-color: #4d5fe3; /* Your theme color */
+    border: 2px solid #4d5fe3;
+    border-radius: 25px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #4d5fe3;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px; /* Adjust space between the text and the button */
+    display: inline-block; /* To apply padding and margin correctly */
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .viewCoursesButton a {
+    text-decoration: none;
+    color: #4d5fe3;
+  }
+
+  .viewCoursesButton:hover {
+    background-color: #4d5fe3;
     color: white;
-    border: none;
-    padding: 1rem 2rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    /* Add other styles for button if necessary */
+    text-decoration: none; /* Optional: Removes underline on hover */
+  }
+
+  .viewCoursesButton a:hover {
+    background-color: #4d5fe3;
+    color: white;
+    text-decoration: none; 
   }
   
   .infoImage {
     flex-basis: 50%;
-    /* Add other styles for image section if necessary */
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
   }
   
   .infoImage img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
     /* Add other styles for image if necessary */
   }
   
@@ -176,6 +229,8 @@
     font-size: 24px; /* Example size, adjust as needed */
     margin-top: 30px; /* Spacing above the heading */
     margin-bottom: 20px; /* Spacing below the heading */
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
   }
   
 

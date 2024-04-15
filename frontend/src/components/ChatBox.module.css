@@ -1,0 +1,145 @@
+  .chatBox {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px; /* Adjust as needed to match the design */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    color: #333;
+    margin-left: 20px; /* Separate it from the chat list */
+    flex-grow: 1; /* Added to allow the box to grow and fill the available space */
+    margin-top: 1%;
+    margin-bottom: 2%;
+    margin-right: 20px;
+}
+
+.chatBox p{
+  align-content: center;
+}
+
+.messageList {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+  
+  .messageItem {
+    margin-bottom: 15px; /* Space between messages */
+    padding: 10px;
+    background-color: #4d5fe3; /* Primary color for message bubbles */
+    color: white; /* Text color inside message bubbles */
+    border-radius: 15px; /* Rounded corners for message bubbles */
+    max-width: 80%; /* Max width for message bubbles */
+    word-wrap: break-word; /* Ensure long words do not overflow */
+    margin: 8px 0;
+    padding: 5px 10px;
+    border-radius: 10px;
+    max-width: 80%; /* or adjust to fit your design */
+    clear: both;
+  }
+
+  /* Style for messages from the other user if needed */
+
+  .myMessage {
+    background-color: #4d5fe3; /* Your sender message color */
+    margin-left: auto; /* Aligns to right */
+    margin-right: 10px; /* Adds some space from the edge */
+  }
+  
+  .theirMessage {
+    background-color: gray; /* Your receiver message color */
+    margin-right: auto; /* Aligns to left */
+    margin-left: 10px; /* Adds some space from the edge */
+  }
+  
+  .sendMessageForm {
+    display: flex;
+    padding: 15px; /* Spacing inside the form */
+    border-top: 1px solid #f1f1f1; /* Separator line */
+  }
+  
+  .sendMessageForm input {
+    flex-grow: 1; /* Input field takes up the remaining space */
+    border: 1px solid #ddd; /* Light border for the input */
+    padding: 10px; /* Spacing inside the input */
+    border-radius: 15px; /* Rounded corners for the input */
+    margin-right: 10px; /* Space between input field and send button */
+  }
+  
+  .sendMessageForm button {
+    padding: 10px 15px; /* Spacing inside the button */
+    background-color: #4d5fe3; /* Primary color for the button */
+    color: white; /* Text color for the button */
+    border: none; /* No border for the button */
+    border-radius: 15px; /* Rounded corners for the button */
+    cursor: pointer; /* Cursor indicates a clickable button */
+  }
+  
+  .sendMessageForm button:hover {
+    background-color: #3658a7; /* Slightly darker shade on hover */
+  }
+  
+  /* Add styling for the header of the chat interface */
+  .chatInterfaceHeader {
+    background-color: #4d5fe3; /* Background color for the header */
+    color: white; /* Text color for the header */
+    display: flex;
+    justify-content: space-between; /* Spacing out the header elements */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px; /* Padding inside the header */
+    border-top-left-radius: 20px; /* Rounded corners on the top left */
+    border-top-right-radius: 20px; /* Rounded corners on the top right */
+  }
+  
+  .chatInterfaceHeader .userInfo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .chatInterfaceHeader .userInfo .userAvatar {
+    width: 40px; /* Avatar size */
+    height: 40px;
+    border-radius: 50%; /* Circle shape */
+    overflow: hidden; /* Hide overflow to maintain circle shape */
+    margin-right: 10px; /* Space between avatar and username */
+  }
+  
+  .chatInterfaceHeader .userInfo .userName {
+    font-weight: bold;
+  }
+  
+  /* Additional utility styles if needed */
+  .utilityIcons {
+    display: flex;
+  }
+  
+  .utilityIcons .icon {
+    margin-left: 10px; /* Space between icons */
+    cursor: pointer;
+  }
+  
+  .utilityIcons .icon:hover {
+    opacity: 0.7; /* Slight transparency on hover for interaction feedback */
+  }
+  
+  /* Placeholder style for the user's status indicator */
+  .userStatus {
+    font-size: 0.9rem; /* Smaller font size for status text */
+    margin-left: 10px; /* Space after the username */
+  }
+  
+  /* Placeholder style for the chat actions like search, call, etc. */
+  .chatActions {
+    display: flex;
+  }
+  
+  .chatActions .actionIcon {
+    margin-left: 10px; /* Space between icons */
+    cursor: pointer;
+  }
+  
+  .chatActions .actionIcon:hover {
+    opacity: 0.7; /* Interaction feedback */
+  }
+  

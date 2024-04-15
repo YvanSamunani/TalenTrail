@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './RegisterPage.module.css';
 import illustration from '../images/register.png';
 import { production_url } from '../constants';
+import { development_url } from '../constants';
 
 const passwordStrengthLevels = {
   0: '',
@@ -81,7 +82,7 @@ const RegisterPage = () => {
     }
 
     try {
-      const response = await axios.post(production_url+'/register', userData);
+      const response = await axios.post(development_url+'/register', userData);
       navigate('/survey');
     } catch (error) {
       if (error.response && error.response.status === 400) {

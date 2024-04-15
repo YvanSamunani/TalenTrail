@@ -5,7 +5,7 @@ import firstSlide from '../images/img2.jpg';
 import firstCardImage from '../images/img11.jpg';
 import secondCardImage from '../images/img9.jpg';
 import thirdCardImage from '../images/img8.jpg';
-import featureImage from '../images/img2.jpg';
+import featureImage from '../images/register.png';
 import iconLearn from '../images/icon1.png'; // Replace with actual icon paths
 import iconTeach from '../images/icon1.png';
 import iconCertify from '../images/icon1.png';
@@ -14,11 +14,12 @@ import iconCertify from '../images/icon1.png';
 function Home() {
   return (
     <div className="container mt-5">
-      <h1 className={styles.header}>Welcome to TalenTrail: Your Pathway to Success</h1>
+      <h1 className={styles.header}>TalenTrail: Your Pathway to Success</h1>
+      <div className={styles.featureText}>
       <p>At TalenTrail, we believe that every individual has the potential to achieve greatness in their 
         chosen career path. Our mission is to empower individuals with the tools, resources, 
         and guidance they need to discover their talents, pursue their passions, and reach their professional goals.</p>
-      
+      </div>
       <div className={styles.featureSection}>
         <div className={styles.featureText}>
           <h2 className={styles.header}>Discover Your Path</h2>
@@ -64,12 +65,12 @@ function Home() {
           <h2>Welcome to the Online Learning Center</h2>
           <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, simply free text by injected humour.</p>
           <ul className={styles.infoList}>
-            <li>Get unlimited access to 66000+ of our top courses</li>
-            <li>Explore a variety of fresh educational topics</li>
-            <li>Find the best qualified teacher for you</li>
-            <li>Transform access to education</li>
+            <li><i className="fas fa-book"></i> Get unlimited access to 66000+ of our top courses</li>
+            <li><i className="fas fa-chalkboard-teacher"></i> Explore a variety of fresh educational topics</li>
+            <li><i className="fas fa-user-tie"></i> Find the best qualified teacher for you</li>
+            <li><i className="fas fa-graduation-cap"></i> Transform access to education</li>
           </ul>
-          <button className={styles.viewCoursesButton}>VIEW ALL COURSES</button>
+          <button className={styles.viewCoursesButton}><a href="/courses" >VIEW ALL COURSES</a></button>
         </div>
         <div className={styles.infoImage}>
           <img src={firstSlide} alt="Online Learning" />
@@ -86,7 +87,7 @@ function Home() {
             <img src={firstCardImage} className={`${styles.cardImg} card-img-top`} alt="Card cap" />
             <div className="card-body">
             <h5 className={`${styles.cardTitle}`}>My Career Path</h5>
-              <p className="card-text">Embark on a journey of self-discovery and career exploration with My Career Path.</p>
+              <p className={styles.cardText}>Embark on a journey of self-discovery and career exploration with My Career Path.</p>
               <button className={styles.cardButton}>Learn More</button> {/* Button added */}
             </div>
           </div>
@@ -96,7 +97,7 @@ function Home() {
             <img src={secondCardImage} className={`${styles.cardImg} card-img-top`}  alt="Card cap" />
             <div className="card-body">
             <h5 className={`${styles.cardTitle}`}>Learn and Grow</h5>
-              <p className="card-text">Invest in your personal and professional development with Learn and Grow.</p>
+              <p className={styles.cardText}>Invest in your personal and professional development with Learn and Grow.</p>
               <button className={styles.cardButton}>Learn More</button> {/* Button added */}
             </div>
           </div>
@@ -106,7 +107,7 @@ function Home() {
             <img src={thirdCardImage} className={`${styles.cardImg} card-img-top`} alt="Card cap" />
             <div className="card-body">
             <h5 className={`${styles.cardTitle}`}>Connect with Experts</h5>
-              <p className="card-text">Forge meaningful connections and gain insights through Connect with Experts.</p>
+              <p className={styles.cardText}>Forge meaningful connections and gain insights through Connect with Experts.</p>
               <button className={styles.cardButton}>Learn More</button> {/* Button added */}
             </div>
           </div>

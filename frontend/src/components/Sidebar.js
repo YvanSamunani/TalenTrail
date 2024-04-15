@@ -71,7 +71,7 @@ const Sidebar = () => {
           <img src={ReviewsIcon} alt="Dashboard" className={styles.icon} />
           Reviews
         </a>
-        <a href="/dashboard" className={styles.navItem}>
+        <a href="/chatpage" className={styles.navItem}>
           <img src={ChatIcon} alt="Dashboard" className={styles.icon} />
           Chat
         </a>

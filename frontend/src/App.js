@@ -6,6 +6,7 @@ import Layout from './components/Layout';
 import Home from './views/Home';
 import AboutPage from './views/AboutPage';
 import Careers from './views/Careers';
+import Courses from './views/AllCoursesPage';
 import SignIn from './views/SignIn';
 import RegisterPage from './views/RegisterPage';
 import Survey from './views/Survey';
@@ -15,6 +16,7 @@ import Dashboard from './views/Dashboard';
 import Sidebar from './components/Sidebar';
 import StatsCard from './components/StatsCard';
 import Topbar from './components/Topbar';
+import ChatPage from './views/ChatPage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -30,6 +32,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/courses" element={<Courses />} />
         <Route path="/registerpage" element={<RegisterPage />} />
         <Route path="/survey" element={<Survey />} />
         <Route path="/careers" element={<Careers />} />
@@ -37,8 +40,10 @@ function App() {
         <Route path="/courseslist" element={<CoursesList />} />
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
         <Route path="/sidebar" element={<Sidebar />} />
+        <Route path="/chatpage" element={<ChatPage />} />
         <Route path="/statscard" element={<StatsCard />} />
         <Route path="/topbar" element={<Topbar />} />
+
       </Routes>
       </div>
      
